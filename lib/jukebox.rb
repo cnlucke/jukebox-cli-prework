@@ -36,6 +36,8 @@ def play(songs)
 
   if response.to_i.between?(1,songs.size)
     puts "Playing #{songs[response.to_i - 1]}"
+  elsif songs.include?(response)
+    puts "Playing #{response}"
   else
     puts "Invalid input, please try again"
   end
